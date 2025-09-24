@@ -1,5 +1,8 @@
 ﻿
 using System.Reflection.Emit;
+using System.Xml.Linq;
+
+
 
 namespace LoggerStdClass
 {
@@ -12,10 +15,15 @@ namespace LoggerStdClass
         public void LogError(LogLevelEnum Level,string message)
         {
             {
-                string logEntry = $"[{DateTime.Now}] [{Level}] {message}";
+                string filePath = "C:\\Users\\AdarshKaul\\source\\repos\\LoggerSolution\\LoggerStdClass\\Logger.config";
+                XDocument doc = XDocument.Load(filePath);
+                string value = doc.Root.Element("AllowedLevels").Value;
+                string logEntry = $"[{DateTime.Now}] [{Level}] {message},[{value}]";
                 Console.WriteLine(logEntry);
             }
         }
     }
 }
+
+
 

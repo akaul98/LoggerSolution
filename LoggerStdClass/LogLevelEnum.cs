@@ -1,5 +1,6 @@
-﻿public enum LogLevelEnum{
+﻿public enum LogLevelEnum
+{
     Info,
     Warn, 
     Error
-}
+} 

@@ -1,5 +1,4 @@
-﻿
-using LoggerStdClass;
+﻿using LoggerStdClass;
 
 class Program
 {

@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Logger.config" />
+    <Content Include="Logger.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.9" />
   </ItemGroup>
 
 </Project>
