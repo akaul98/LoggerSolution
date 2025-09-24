@@ -31,18 +31,6 @@ namespace LoggerStdClass
 
             string fileName = $"log_{DateTime.Now:yyyy-MM-dd}.txt";
             string filePath = Path.Combine(GetProjectRoot(), "Logs", fileName);
-
-            if (!File.Exists(filePath))
-            {
-                using (var fs = File.Create(filePath))
-                {
-                    byte[] info = new System.Text.UTF8Encoding(true).GetBytes(
-                        "Log file created on " + DateTime.Now + Environment.NewLine
-                    );
-                    fs.Write(info, 0, info.Length);
-                }
-            }
-
             return filePath;
         }
     }
